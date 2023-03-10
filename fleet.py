@@ -25,8 +25,10 @@ class Fleet:
                 weapon = Weapon(self.weapon,self.power)
                 name.weapon_list.append(weapon)
                 weapon_counter += 1
+                print(weapon.name)
+                print(weapon.attack_power)
             robo_counter += 1
 
 
-
+fleet = Fleet()
 
