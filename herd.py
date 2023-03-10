@@ -1,8 +1,8 @@
 from dino import Dinosaur
 import random
 
-dino_name_list = ['R2-D2','ChatGPT', 'C3PO', 'Terminator', 'Optimus Prime', 'Roomba', 'HAL 9000', 'Kitt', 'Golden Readon', 'CNN News Anchor']
-attack_power = [5,5,10,10,10,20,20,20,40]
+dino_name_list = ['Reptar','Barney', 'Rex', 'Yoshi', 'Big Bird', 'Gronk', 'Nancy Pelosi', 'Mitch McConnell', 'Godzilla', 'Dino Flintstone']
+attack_power = [5,5,5,10,10,20,20,30,50]
 
 class Herd:
     def __init__(self):
@@ -16,8 +16,8 @@ class Herd:
             self.power = attack_power.pop(attack_power.index(attack_power[random.randint(0,len(attack_power)-1)]))
             name = Dinosaur(self.name, self.power)
             self.dino_herd.append(name)
-            #print(name.name)
-            #print(name.attack_power)
+            print(name.name)
+            print(name.attack_power)
             dino_counter += 1
 
 herd = Herd()
