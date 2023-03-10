@@ -2,7 +2,7 @@ from dino import Dinosaur
 import random
 
 dino_name_list = ['Reptar','Barney', 'Rex', 'Yoshi', 'Big Bird', 'Gronk', 'Nancy Pelosi', 'Mitch McConnell', 'Godzilla', 'Dino Flintstone']
-attack_power = [5,5,5,10,10,20,20,30,40]
+attack_power = [5,5,10,10,10,20,20,30,40]
 
 class Herd:
     def __init__(self):
