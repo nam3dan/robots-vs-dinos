@@ -10,7 +10,6 @@ class Battlefield:
     def __init__(self):
         self.herd = Herd()
         self.fleet = Fleet()
-        self.run_game()
     
     def run_game(self):
         self.display_welcome()
@@ -20,12 +19,14 @@ class Battlefield:
         self.display_final_winner()
 
     def display_winner(self):
+        sleep(print_pacing)
         if winner == 1:
             print(f"\n{user.name} has murdered {target.name}.")
         elif winner == 0:
             print(f"\n{target.name} has murdered {user.name}.")
         else:
             print(f"\nBoth {user.name} and {target.name} have died.")
+        sleep(print_pacing)
 
     def display_welcome(self):
         print("\n\nWelcome to the epic fight between Robots and Dinosaurs.......")
@@ -97,12 +98,10 @@ class Battlefield:
     def display_final_winner(self):
         if len(self.fleet.robot_fleet) > len(self.herd.dino_herd):
             print('\n The Robots have won!')
-        else:
+            
+        elif len(self.fleet.robot_fleet) < len(self.herd.dino_herd):
             print('\n The Dinosaurs have won!')
+        else:
+            print('\nSweet Baby Jesus, it\'s a tie!')
 
 
-
-        
-
-
-battlefield = Battlefield()
